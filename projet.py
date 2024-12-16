@@ -13,7 +13,7 @@ donnees = [
 
 @app.route('/')
 def afficher_tableau():
-    return render_template('projet2.html', donnees=donnees)
+    return render_template('table.html.jinja', donnees=donnees)
 
 if __name__ == '__main__':
     app.run(debug=True)
