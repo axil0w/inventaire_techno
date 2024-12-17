@@ -29,17 +29,17 @@
     <table>
         <thead>
             <tr>
-                <th>Nom</th>
-                <th>Âge</th>
-                <th>Ville</th>
+                <th>photo</th>
+                <th>nom du produit</th>
+                <th>quantitée</th>
             </tr>
         </thead>
         <tbody>
-            {% for utilisateur in donnees %}
+            {% for produit in donnees %}
             <tr>
-                <td>{{ utilisateur.nom }}</td>
-                <td>{{ utilisateur.age }}</td>
-                <td>{{ utilisateur.ville }}</td>
+                <td><image src="../images/{{produit[0]}}" /></td>
+                <td>{{ produit[1] }}</td>
+                <td>{{ produit[2] }}</td>
             </tr>
             {% endfor %}
         </tbody>
