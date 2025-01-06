@@ -3,26 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Tableau des Utilisateurs</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        table { 
-            border-collapse: collapse; 
-            width: 100%; 
-            max-width: 800px; 
-            margin: auto; 
-        }
-        th, td { 
-            border: 1px solid #ddd; 
-            padding: 8px; 
-            text-align: left; 
-        }
-        th { 
-            background-color: #f2f2f2; 
-            font-weight: bold; 
-        }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        tr:hover { background-color: #f5f5f5; }
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="/static/table/style.css">
+    <script type="text/javascript" src="/static/table/script.js"></script> 
 </head>
 <body>
     <h1>Liste des Utilisateurs</h1>
@@ -32,14 +15,20 @@
                 <th>photo</th>
                 <th>nom du produit</th>
                 <th>quantitée</th>
+                <th>suppression</th>
+                <th>ajout</th>
             </tr>
         </thead>
         <tbody>
             {% for produit in donnees %}
             <tr>
-                <td><image src="../images/{{produit[0]}}" /></td>
+                <td><image src="/static/images/{{produit[0]}}" class="image-icon"/></td>
                 <td>{{ produit[1] }}</td>
                 <td>{{ produit[2] }}</td>
+
+                <td><button onclick="remove_object('{{ produit[1] }}')">supprime</button></td>
+                <td><button onclick="add_object('{{ produit[1] }}')">ajouter</button></td>
+                    
             </tr>
             {% endfor %}
         </tbody>
