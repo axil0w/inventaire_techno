@@ -14,20 +14,26 @@
             <tr>
                 <th>photo</th>
                 <th>nom du produit</th>
-                <th>quantitée</th>
+                <th>quantité</th>
                 <th>suppression</th>
                 <th>ajout</th>
             </tr>
         </thead>
         <tbody>
             {% for produit in donnees %}
-            <tr>
+            <tr element="{{produit[1]}}">
                 <td><image src="/static/images/{{produit[0]}}" class="image-icon"/></td>
                 <td>{{ produit[1] }}</td>
                 <td>{{ produit[2] }}</td>
 
-                <td><button onclick="remove_object('{{ produit[1] }}')">supprime</button></td>
-                <td><button onclick="add_object('{{ produit[1] }}')">ajouter</button></td>
+                <td>
+                    <button onclick="remove_object(this)">supprimer</button>
+                    <textarea onfocus="clearContents(this);" id="remove">1</textarea>
+                </td>
+                <td>
+                    <button onclick="add_object(this)">ajouter</button>
+                    <textarea onfocus="clearContents(this);" id="add">1</textarea>
+                </td>
                     
             </tr>
             {% endfor %}
