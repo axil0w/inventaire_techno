@@ -3,7 +3,6 @@ import pandas as pd
 import sqlite3
 import sys
 app = Flask(__name__)
-app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 10000
 
 connexion = sqlite3.connect("inventaire.db", check_same_thread=False)
 cursor = connexion.cursor()
@@ -39,15 +38,16 @@ def start():
 @app.route('/table')
 def afficher_tableau():
     donnees = get_all_items()
-    return render_template('table.html', donnees=donnees)
+    return render_template('stock.html', donnees=donnees)
 
 
 @app.post('/add')
 def add_stock():
     """pour ajouter un nombre d'objet a celui que l on a deja"""
-    print(request)
-    name = str(request.json)
-    new_quantity = get_quantity("stock", name) + 1
+    data = request.get_json()
+    name = data.get("name")
+    quantity = int(data.get("quantity"))
+    new_quantity = get_quantity("stock", name) + quantity
     update_inventory("stock", name, new_quantity)
     return '', 204
 
@@ -55,8 +55,10 @@ def add_stock():
 @app.post('/remove')
 def remove_stock():
     """pour enlever un nombre d'objet a celui que l on a deja"""
-    name = str(request.json)
-    new_quantity = get_quantity("stock", name) - 1
+    data = request.get_json()
+    name = data.get("name")
+    quantity = int(data.get("quantity"))
+    new_quantity = get_quantity("stock", name) - quantity
     if new_quantity < 0:
         new_quantity = 0
         raise ValueError("Not enough stock to remove")

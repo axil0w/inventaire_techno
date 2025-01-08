@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38aefe0c-8e30-425e-afb1-b44450a92466" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/table/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/table/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commandes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventaire.db" beforeDir="false" afterPath="$PROJECT_DIR$/inventaire.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet.py" beforeDir="false" afterPath="$PROJECT_DIR$/projet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/table/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/table/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/table/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/table/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/agent/Documents/GitHub/inventaire_techno",
+    "last_opened_file_path": "C:/Users/agent/Documents/GitHub/inventaire_techno/static/table",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +52,39 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\agent\Documents\GitHub\inventaire_techno\static\table" />
+      <recent name="C:\Users\agent\Documents\GitHub\inventaire_techno\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\agent\Documents\GitHub\inventaire_techno\static\table" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start server" type="PythonConfigurationType" factoryName="Python">
+      <module name="inventaire_techno" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

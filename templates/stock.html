@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau des Utilisateurs</title>
+    <link rel="stylesheet" type="text/css" href="/static/table/style.css">
+    <script type="text/javascript" src="/static/table/script.js"></script> 
+</head>
+<body>
+    <h1>Liste des Utilisateurs</h1>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>photo</th>
+                    <th>nom du produit</th>
+                    <th>quantité</th>
+                    <th>suppression</th>
+                    <th>ajout</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produit in donnees %}
+                <tr element="{{produit[1]}}">
+                    <td><image src="/static/images/{{produit[0]}}" class="image-icon"></image></td>
+                    <td>{{ produit[1] }}</td>
+                    <td>{{ produit[2] }}</td>
+
+                    <td>
+                        <button onclick="remove_object(this)">supprimer</button>
+                        <textarea onfocus="clearContents(this);" id="remove">1</textarea>
+                    </td>
+                    <td>
+                        <button onclick="add_object(this)">ajouter</button>
+                        <textarea onfocus="clearContents(this);" id="add">1</textarea>
+                    </td>
+
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>
+                        <label for="file" class="image-icon form_button">
+                            <image class="image-icon" src="/static/table/upload.png"></image>
+                        </label>
+                        <input type="file" id="file" accept="image/png" />
+                    </td>
+                    <td>
+                        <input type="text"/>
+                    </td>
+                    <td>
+                        <input type="number"/>
+                    </td>
+                    <td></td>
+                    <td>
+                        <button class="form_button">
+                            <image class="image-icon" src="/static/table/add.png"></image>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="">
+
+        </div>
+    </div>
+</body>
+</html>
