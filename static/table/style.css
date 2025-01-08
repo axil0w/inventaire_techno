@@ -64,7 +64,7 @@ tr:hover {
     background-color: grey;
 }
 
-#file {
+#create_file {
     display: none; /* Cache le champ input */
 }
 

@@ -34,3 +34,10 @@ async function add_object(object){
         });
     location.reload();
 }
+
+async function create_stock(object){
+    const photo = document.getElementById("create_file").files[0];
+    const name = document.getElementById("create_text").value;
+    const number = document.getElementById("create_number").value;
+    console.log(photo,name,number);
+}

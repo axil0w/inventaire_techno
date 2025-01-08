@@ -39,20 +39,20 @@
                 {% endfor %}
                 <tr>
                     <td>
-                        <label for="file" class="image-icon form_button">
+                        <label for="create_file" class="image-icon form_button">
                             <image class="image-icon" src="/static/table/upload.png"></image>
                         </label>
-                        <input type="file" id="file" accept="image/png" />
+                        <input type="file" id="create_file" accept="image/png" />
                     </td>
                     <td>
-                        <input type="text"/>
+                        <input id="create_text" type="text"/>
                     </td>
                     <td>
-                        <input type="number"/>
+                        <input id="create_number" type="number"/>
                     </td>
                     <td></td>
                     <td>
-                        <button class="form_button">
+                        <button class="form_button" onclick="create_stock(this)">
                             <image class="image-icon" src="/static/table/add.png"></image>
                         </button>
                     </td>
