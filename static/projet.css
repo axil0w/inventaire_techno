@@ -1,0 +1,165 @@
+/* Couleur de fond pour le corps de la page */
+body {
+  background-color: #FAC05E; /* Jaune pâle */
+  margin: 0; /* Supprime les marges par défaut */
+}
+
+/* Style pour le texte principal au centre de l'écran */
+h1 {
+  margin: 0; /* Supprime les marges par défaut */
+  height: 100vh; /* Utilise toute la hauteur de la fenêtre */
+  display: flex; /* Active le modèle de boîte flexible */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  color: #FFFFFF; /* Texte en blanc */
+  font-family: 'DM Serif Text', serif; /* Police personnalisée */
+}
+
+/* Bouton "login" dans le coin supérieur droit */
+#login {
+  position: absolute; /* Positionnement par rapport à son conteneur */
+  top: 20px; /* Distance depuis le haut */
+  right: 50px; /* Distance depuis la droite */
+  display: inline-block; /* Affichage en bloc en ligne */
+  background-color: #3FC07B; /* Vert clair */
+  border-radius: 10px; /* Angles arrondis */
+  border: #19BE14; /* Bordure verte */
+  color: #eeeeee; /* Texte gris clair */
+  text-align: center; /* Centrer le texte */
+  font-size: 20px; /* Taille du texte */
+  padding: 15px; /* Espacement interne */
+  width: 125px; /* Largeur fixe */
+  cursor: pointer; /* Curseur "main" au survol */
+  margin: 5px; /* Espacement externe */
+}
+
+/* Effet au clic sur le bouton "login" */
+#login:active {
+  background-color: #07a403; /* Vert foncé */
+  color: #fff; /* Texte blanc */
+}
+
+/* Style de la navigation */
+.nav {
+  overflow: hidden; /* Cache les éléments débordants */
+}
+
+/* Style des liens dans la navigation */
+.nav a {
+  float: left; /* Alignement à gauche */
+  display: block; /* Affichage en bloc */
+}
+
+/* Cacher le menu toggle par défaut */
+.nav #menu-toggle {
+  display: none;
+}
+
+/* Styles pour les petits écrans (max 600px) */
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {
+    display: none; /* Cache tous les liens sauf le premier */
+  }
+  .nav a#menu-toggle {
+    float: right; /* Positionnement à droite */
+    display: block; /* Affiche le toggle */
+  }
+}
+
+/* Styles pour la navigation en mode "ouvert" sur petits écrans */
+@media screen and (max-width: 600px) {
+  .nav.nav--open {
+    position: relative; /* Position relative pour la navigation */
+  }
+  .nav.nav--open #menu-toggle {
+    position: absolute; /* Position absolue du toggle */
+    right: 0; /* Alignement à droite */
+    top: 0; /* Alignement en haut */
+  }
+  .nav.nav--open a {
+    float: none; /* Désactive l'alignement flottant */
+    display: block; /* Affiche les liens en bloc */
+    text-align: right; /* Texte aligné à droite */
+  }
+}
+
+/* Barres du menu toggle */
+.menu-toggle__bar1, .menu-toggle__bar2, .menu-toggle__bar3 {
+  width: 21px; /* Largeur des barres */
+  height: 3px; /* Hauteur des barres */
+  background-color: #149EBE; /* Couleur bleu clair */
+  margin: 4px 0; /* Espacement entre les barres */
+  transition: 0.3s; /* Transition pour les effets */
+}
+
+/* Effets sur les barres du menu toggle en mode "ouvert" */
+.menu-toggle--open .menu-toggle__bar1 {
+  transform: translate(0, 7px) rotate(-45deg); /* Rotation de la première barre */
+}
+.menu-toggle--open .menu-toggle__bar2 {
+  opacity: 0; /* Cache la deuxième barre */
+}
+.menu-toggle--open .menu-toggle__bar3 {
+  transform: translate(0, -7px) rotate(45deg); /* Rotation de la troisième barre */
+}
+
+/* Conteneur du menu de navigation */
+.nav {
+  display: flex; /* Utilise le modèle de boîte flexible */
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  gap: 90px; /* Espacement entre les items */
+  padding: 0px 0; /* Pas de padding vertical */
+  background-color: #FAC05E; /* Couleur de fond similaire au corps */
+  position: fixed; /* Fixe la navigation en haut de la page */
+  top: 0; /* Alignement en haut */
+  left: 0; /* Alignement à gauche */
+  width: 100%; /* Prend toute la largeur de la fenêtre */
+  z-index: 100; /* Place la navigation au-dessus des autres éléments */
+  overflow: visible; /* Permet de voir les éléments qui débordent */
+}
+
+/* Style des éléments individuels du menu */
+#menu {
+  display: flex; /* Utilise le modèle de boîte flexible */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  background-color: #3FC07B; /* Couleur verte différente du fond */
+  color: #FFFFFF; /* Texte blanc */
+  font-family: 'DM Serif Text', serif; /* Police personnalisée */
+  font-size: 28px; /* Taille de police plus grande */
+  text-decoration: none; /* Supprime le soulignement */
+  height: 90px; /* Hauteur fixe */
+  width: 300px; /* Largeur fixe */
+  border-radius: 0 0 25px 25px; /* Bord inférieur arrondi */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animations */
+}
+
+/* Effet au survol des liens de navigation */
+.nav a:hover {
+  transform: scale(1.1); /* Agrandit légèrement l'élément */
+  background-color: #07A403; /* Change la couleur de fond */
+}
+
+/* Cacher le menu toggle par défaut (pour les petits écrans) */
+.nav #menu-toggle {
+  display: none;
+}
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

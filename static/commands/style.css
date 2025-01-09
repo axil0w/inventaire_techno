@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle; /* Centre verticalement tout le contenu */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.image-icon {
+    display: block; /* Nécessaire pour centrer avec margin auto */
+    max-width: 50px;
+    height: 50px;
+    margin: 0 auto; /* Centre horizontalement l'image */
+}
+
+.table {
+    display: grid;
+    justify-content: center;
+    border: 3px solid #000000;
+    width:min-content;
+    margin:auto;
+}
+
+.form_button {
+    display: flex; /* Pour centrer le contenu dans le bouton */
+    max-width: 50px;
+    height: 50px;
+    margin: 0 auto; /* Centre le bouton dans la cellule */
+    background-color: #a3a3a3;
+    border: none;
+    color: white;
+    padding: 0;
+    font-size: 16px;
+    border-radius: 10px;
+    justify-content: center; /* Centre horizontalement le contenu interne */
+    align-items: center; /* Centre verticalement le contenu interne */
+}
+
+.form_button:hover {
+    background-color: grey;
+}
+
+#create_file {
+    display: none; /* Cache le champ input */
+}
+
+td {
+    text-align: center; /* Centre horizontalement le contenu */
+    vertical-align: middle; /* Centre verticalement le contenu */
+}
+
+.shipping{
+    background-color:green;
+    border-radius:10px;
+}

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Tableau des Utilisateurs</title>
-    <link rel="stylesheet" type="text/css" href="/static/table/style.css">
-    <script type="text/javascript" src="/static/table/script.js"></script> 
+    <link rel="stylesheet" type="text/css" href="/static/stock/style.css">
+    <script type="text/javascript" src="/static/stock/script.js"></script>
 </head>
 <body>
-    <h1>Liste des Utilisateurs</h1>
+    <h1>produits en acheminement</h1>
     <div class="table">
         <table>
             <thead>
@@ -40,7 +40,7 @@
                 <tr>
                     <td>
                         <label for="create_file" class="image-icon form_button">
-                            <image class="image-icon" src="/static/table/upload.png"></image>
+                            <image class="image-icon" src="/static/stock/upload.png"></image>
                         </label>
                         <input type="file" id="create_file" accept="image/png" />
                     </td>
@@ -53,7 +53,7 @@
                     <td></td>
                     <td>
                         <button class="form_button" onclick="create_stock(this)">
-                            <image class="image-icon" src="/static/table/add.png"></image>
+                            <image class="image-icon" src="/static/stock/add.png"></image>
                         </button>
                     </td>
                 </tr>
@@ -63,5 +63,6 @@
 
         </div>
     </div>
+    <a href="/">accueil</a>
 </body>
 </html>

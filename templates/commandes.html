@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Tableau des Utilisateurs</title>
-    
-    <link rel="stylesheet" type="text/css" href="/static/table/style.css">
-    <script type="text/javascript" src="/static/table/script.js"></script> 
+    <link rel="stylesheet" type="text/css" href="/static/commands/style.css">
+    <script type="text/javascript" src="/static/commands/script.js"></script>
 </head>
 <body>
-    <h1>Liste des Utilisateurs</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>photo</th>
-                <th>nom du produit</th>
-                <th>quantité</th>
-                <th>declarer livré</th>
+    <h1>stock sur place</h1>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>photo</th>
+                    <th>nom du produit</th>
+                    <th>en acheminement</th>
+                    <th>déclarer arrivé</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produit in donnees %}
+                <tr element="{{produit[1]}}">
+                    <td><image src="/static/images/{{produit[0]}}" class="image-icon"></image></td>
+                    <td>{{ produit[1] }}</td>
+                    <td>{{ produit[2] }}</td>
+                    <td>
+                        <button class="form_button" onclick="arrived(this)">
+                            <image class="image-icon" src="/static/commands/done.png"></image>
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>
+                        <label for="create_file" class="image-icon form_button">
+                            <image class="image-icon" src="/static/commands/upload.png"></image>
+                        </label>
+                        <input type="file" id="create_file" accept="image/png" />
+                    </td>
+                    <td>
+                        <input id="create_text" type="text"/>
+                    </td>
+                    <td>
+                        <input id="create_number" type="number"/>
+                    </td>
+                    <td>
+                        <button class="form_button" onclick="create_stock(this)">
+                            <image class="shipping image-icon" src="/static/commands/cart.png"></image>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="">
 
-            </tr>
-        </thead>
-        <tbody>
-            {% for produit in donnees %}
-            <tr element="{{produit[1]}}">
-                <td><image src="/static/images/{{produit[0]}}" class="image-icon"></image></td>
-                <td>{{ produit[1] }}</td>
-                <td>{{ produit[2] }}</td>
-
-                <td>
-                    <button onclick="remove_object(this)">supprimer</button>
-                    <textarea onfocus="clearContents(this);" id="remove">1</textarea>
-                </td>
-                <td>
-                    <button onclick="add_object(this)">ajouter</button>
-                    <textarea onfocus="clearContents(this);" id="add">1</textarea>
-                </td>
-                    
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        </div>
+    </div>
+    <a href="/">accueil</a>
 </body>
 </html>
