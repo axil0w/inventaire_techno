@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau des Utilisateurs</title>
+    <link rel="stylesheet" type="text/css" href="/static/vue/style.css">
+    <script type="text/javascript" src="/static/stock/script.js"></script>
+</head>
+<body>
+    <h1>produits en acheminement</h1>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>photo</th>
+                    <th>nom du produit</th>
+                    <th>quantité en stock</th>
+                    <th>quantité en acheminement</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produit in donnees %}
+                <tr element="{{produit[1]}}">
+                    <td><image src="/static/images/{{produit[0]}}" class="image-icon"></image></td>
+                    <td>{{ produit[1] }}</td>
+                    <td>{{ produit[2] }}</td>
+                    <td>{{ produit[3] }}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="">
+
+        </div>
+    </div>
+    <a href="/">accueil</a>
+</body>
+</html>

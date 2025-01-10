@@ -129,8 +129,8 @@ h1 {
   font-family: 'DM Serif Text', serif; /* Police personnalisée */
   font-size: 28px; /* Taille de police plus grande */
   text-decoration: none; /* Supprime le soulignement */
-  height: 90px; /* Hauteur fixe */
-  width: 300px; /* Largeur fixe */
+  height: 60px; /* Hauteur fixe */
+  width: 20vw; /* Largeur fixe */
   border-radius: 0 0 25px 25px; /* Bord inférieur arrondi */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
   transition: transform 0.3s ease, background-color 0.3s ease; /* Animations */
@@ -145,6 +145,11 @@ h1 {
 /* Cacher le menu toggle par défaut (pour les petits écrans) */
 .nav #menu-toggle {
   display: none;
+}
+
+.navbar{
+    width:70%
+
 }
 
     

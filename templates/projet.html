@@ -11,22 +11,46 @@
   <link href="/static/projet.css" rel="stylesheet" />
   <link href="projet.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="projet.js"></script> 
+  <script>
+     document.addEventListener('DOMContentLoaded', () => {
+      const stock = document.getElementsByClassName("stock")[0];
+      const commandes = document.getElementsByClassName("commandes")[0];
+      console.log(stock);
+      admin = false;
+      if ("{{passed}}" == "true"){
+        document.cookie = "{{ passed }}";
+      }
+      if (document.cookie == "true"){
+        admin = true;
+      }
+      stock.addEventListener('click', function(event) {
+              if (!admin){
+                event.preventDefault(); // Prevent navigation
+                alert("vous devez être admin pour accéder a cette page");
+              }
+
+          });
+      commandes.addEventListener('click', function(event) {
+              if (!admin){
+                event.preventDefault(); // Prevent navigation
+                alert("vous devez être admin pour accéder a cette page");
+              }
+
+          });
+    });
+  </script>
   
   
 
 </head>
 <body>
   <nav class="nav" id="nav">
+    <div class="navbar">
+      <a id='menu' href="/vue">vue</a>
+      <a id='menu' class="stock" href="/stock">stock</a>
+      <a id='menu' class="commandes" href="/commandes">commandes</a>
+    </div>
     <a id='login' href="/login" style="text-decoration: none;">Se connecter</a>
-    <a id='menu' href="/vue">vue</a>
-    <a id='menu' href="/stock">stock</a>
-    <a id='menu' href="/commandes">commandes</a>
-    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
-      <div class="menu-toggle__bar1"></div>
-      <div class="menu-toggle__bar2"></div>
-      <div class="menu-toggle__bar3"></div>
-    </a>    
   </nav>
   <h1>Bonjour bienvenue sur l'inventaire de robotique !
   </h1>
