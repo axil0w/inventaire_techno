@@ -11,8 +11,7 @@ cursor = connexion.cursor()
 
 logins = [('perminjat', '351be4952939efdc0e7b7b0e31943c07c070595196f144cb989a683af88c42f9'),
           ('nathanlegigabg', '31bcc8fcddd9f53d7ab65c2b8ae403e4ef9bb0a3bd59a34e26fae86b6c358287'),
-          ('alanleptitchou', '7357f378f85beabd9b7e74a1cf2f67e4f6b1b2db7c4de1d8fc7891ed95c96b7d')
-          ]
+          ('alanleptitchou', '7357f378f85beabd9b7e74a1cf2f67e4f6b1b2db7c4de1d8fc7891ed95c96b7d')]
 
 def update_inventory(table_name, name, quantity):
     """Pour changer la valeur du nombre d'objet que l'on a"""

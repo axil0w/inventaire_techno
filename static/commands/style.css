@@ -77,3 +77,19 @@ td {
     background-color:green;
     border-radius:10px;
 }
+
+div.return{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+a.return{
+    padding:20px;
+    background-color:#0069ff;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
