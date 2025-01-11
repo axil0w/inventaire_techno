@@ -48,6 +48,12 @@ def get_vue():
         else:
             final_item = list(item) + [0]
         vue.append(final_item)
+    cursor.execute("SELECT * FROM commandes WHERE NOT EXISTS ( SELECT 1 FROM stock WHERE commandes.name = stock.name)")  # tout les elements uniquement present dans commandes
+    for item in cursor.fetchall():
+
+        final_item = list(item)[0:2] + [0] + [list(item)[-1]]
+        print(final_item)
+        vue.append(final_item)
     return vue
 
 
@@ -98,7 +104,7 @@ def afficher_commandes():
 
 @app.post('/add_stock')
 def add_stock():
-    """pour ajouter un nombre d'objet a celui que l on a deja"""
+    """pour ajouter un nombre d'objet a celui que l'on a deja"""
     data = request.get_json()
     name = data.get("name")
     quantity = int(data.get("quantity"))
