@@ -15,13 +15,16 @@
      document.addEventListener('DOMContentLoaded', () => {
       const stock = document.getElementsByClassName("stock")[0];
       const commandes = document.getElementsByClassName("commandes")[0];
-      console.log(stock);
+      commandes.style.backgroundColor = "grey";
+      stock.style.backgroundColor = "grey";
       admin = false;
       if ("{{passed}}" == "true"){
         document.cookie = "{{ passed }}";
       }
       if (document.cookie == "true"){
         admin = true;
+        commandes.style.backgroundColor = "#3FC07B";
+        stock.style.backgroundColor = "#3FC07B";
       }
       stock.addEventListener('click', function(event) {
               if (!admin){
@@ -46,9 +49,9 @@
 <body>
   <nav class="nav" id="nav">
     <div class="navbar">
-      <a id='menu' href="/vue">vue</a>
-      <a id='menu' class="stock" href="/stock">stock</a>
-      <a id='menu' class="commandes" href="/commandes">commandes</a>
+      <a id='menu' href="/vue">👀vue</a>
+      <a id='menu' class="stock" href="/stock">📦stock</a>
+      <a id='menu' class="commandes" href="/commandes">🚚commandes</a>
     </div>
     <a id='login' href="/login" style="text-decoration: none;">Se connecter</a>
   </nav>
