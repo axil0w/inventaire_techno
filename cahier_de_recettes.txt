@@ -1,0 +1,11 @@
+-la connection doit marcher pour tout les codes
+-la connection doit être persistante lors de l'envoi d'un nouveau formulaire.
+-l'onglet vue doit être accessible
+-l'onglet vue doit montrer le contenu de tout ce qui est dans les deux tables sql
+-l'onglet stock doit être accessible
+-chaque produit doit permettre d'ajouter et supprimer du stock
+-le produit doit disparaitre quand le stock atteint 0
+-des nouveaux produits peuvent être ajouté et s'afficher
+-l'onglet commandes doit être accessible
+-des nouveaux produits peuvent être commandes et s'affichent
+-lors de la mise en stock le produit doit disparaitre et apparaitre sur le stock

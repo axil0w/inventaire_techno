@@ -1,0 +1,2 @@
+Alan: revision du python3 et clarté du code, page principale du site
+Nathan: autre pages, elements sql, mise en ligne, requêtes entre python et javascript, cookie handling pour la connection

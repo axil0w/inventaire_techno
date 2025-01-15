@@ -1,54 +1,8 @@
-2. Objectifs
-
-    Simplifier la gestion de l'inventaire du club robotique.
-    Suivre les entrées et sorties de stock.
-    Permettre la consultation en temps réel de l'état du stock.
-    Faciliter la planification des commandes.
-    Améliorer la traçabilité des composants.
-
-3. Fonctionnalités
-
-3.1. Gestion des articles
-
-    Ajout d'articles: Enregistrement de nouveaux articles avec leurs informations (nom, description, quantité, photo, etc.).
-    Modification d'articles: Mise à jour des informations des articles existants.
-    Suppression d'articles: Suppression d'articles obsolètes ou inutiles.
-    Recherche d'articles: Recherche d'articles par nom, description ou autres critères.
-    Affichage de l'inventaire: Liste complète des articles avec leurs informations et quantités.
-
-3.2. Gestion des mouvements de stock
-
-    Enregistrement des entrées: Ajout de quantités d'articles en stock (achats, dons, etc.).
-    Enregistrement des sorties: Retrait de quantités d'articles du stock (utilisation, prêt, etc.).
-    Suivi des mouvements: Historique des entrées et sorties pour chaque article.
-
-3.3. Gestion des commandes
-
-    Création de commandes: Demande d'achat de nouveaux articles.
-    Suivi des commandes: Statut des commandes (en cours, reçue, etc.).
-    Réception des commandes: Mise à jour du stock lors de la réception des commandes.
-
-3.4. Rapports et analyses
-
-    Inventaire actuel: Liste des articles en stock avec leurs quantités.
-    Mouvements de stock: Rapport des entrées et sorties sur une période donnée.
-    Articles en rupture de stock: Liste des articles dont la quantité est inférieure à un seuil défini.
-    Prévisions de stock: Estimation des besoins futurs en fonction de l'historique des mouvements.
-
-3.5. Administration
-
-    Gestion des utilisateurs: Création et gestion des comptes utilisateurs avec différents niveaux d'accès.
-
-4. Spécifications non fonctionnelles
-
-    Performance: Le système doit être rapide et réactif, même avec un grand nombre d'articles.
-    Ergonomie: L'interface web doit être intuitive et facile à utiliser.
-    Fiabilité: Le système doit être stable et fonctionner sans erreurs.
-    Maintenance: Le système doit être facile à maintenir et à mettre à jour.
-
-5. Technologies
-
-    Langage de programmation: Python (Flask ou Django)
-    Base de données: SQLite, MySQL ou PostgreSQL
-    Interface web: HTML, CSS, JavaScript
-
+le site devra pouvoir gérer le stock sur place et en acheminement du club de robotique. Il devra contenir
+un 3 onglets: la vue permettant a n'importe quel utilisateur de voir l'état des stocks; l'onglet stock permettant
+d'ajouter un nouvel element en stock et rajouter ou suprimmer du stock, cette onglet n'est disponible qu'aux
+administrateurs connectés; un onglet commandes permettant d'ajouter des produits en cours d'acheminement et de les
+déclarer arrivé qui aura effet de les bouger dans le stock, cet onglet ne sera disponible qu'aux administrateur.
+Le site contiendra une page pour se connecter ainsi que des identifiant pour le professeur et les 2 fondateurs du projet.
+Les couleurs et les tableaux seront agréables à regarder.
+Le site sera mis en ligne et accessible par tous.
