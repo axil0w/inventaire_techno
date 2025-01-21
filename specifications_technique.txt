@@ -1,0 +1,5 @@
+le projet utilisera du html/css et javascript
+le backend sera implémenté grâce a flask et le html généré grâce à jinja
+les requêtes entre le javascript et flask resterons locale
+les images transiterons en base64
+les donnes seront stocké en sql sur deux tables: commandes et stock
